@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PROJECT JQUERY</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<style>
+		.inner{
+				background-image: url("./image/img1.avif");
+		}
+	</style>
+	<script>
+		// when hover the button then this functin excute
+		 $(function(){
+		 	$('.inner1 button').hover(function(){
+		 		var id=$(this).attr('id');
+		 		var name=$(this).attr('name');
+		 		var img='image/po'+id+'.jpg';
+		 		$('.img').attr('src',img);
+		 		if(id==1)
+				 {  
+                    $(".row").fadeIn().animate({top: '200px'}).css({"margin-left":"10px"});
+                    return;
+				 }
+				 if(id==2)
+				 {  
+                   $(".row").fadeIn().animate({top:'200px'}).css({"margin-left":"160px"});
+                   return
+				 }
+				 if(id==3)
+				 {  
+                    $(".row").fadeIn().animate({top:'200px'}).css({"margin-left":"160px"});
+                   return
+				 }
+				 if(id==4)
+				 {  
+				 	 $(".row").fadeIn().animate({top:'200px'}).css({"margin-left":"160px"});
+                   return
+				 }
+		 	})
+		 	// when image click the this function call
+		 	$(".img").on('click', function () {
+		 		
+		 	});
+		 	$(".back").on('click', function (e) {
+		 		e.stopPropagation();
+		 		e.preventDefault();
+		 		$('details').hide("slide", { direction: "right" }, 500, function () {
+		 			$('inner1').show("slide", { direction: "left" }, 500);
+		 		});
+		 	});
+		 })
+		  $(document).ready(function(){
+     $(".img").on('click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        $('.img').css({"width":"200px","height":"500px"})
+        $('.inner1').hide("slide", { direction: "left" }, 500, function () {
+            $('.rightinner').show("slide", { direction: "left" }, 500);
+        });
+    });
+    $("rightinner").on('click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+
+        $('rightinner').css({}).hide("slide", { direction: "right" }, 500, function () {
+            $('#left').show("slide", { direction: "left" }, 500);
+        });
+    });
+
+})
+	</script>
+</head>
+<body>
+	<div id="main">
+		 <div class="left">
+			<h2><b>D.V MITTAL & CO.</b></h3><br><p><i>CHARTERED ACCOUNTTANTS</i></p>
+		 </div>
+		 <div class="right">
+			<p class="anchor">
+				<a href="">CAREERS</a>
+				<a href="">CONTACT</a>
+				<a href="">ALUMNI</a>
+				<BUTTON>LOGIN</BUTTON>
+			</p>
+		  </div>
+		  <hr>
+	</div>
+		<div id="center">
+			<div class="inner">
+				<div class="row">
+					<img class="img" src="">
+				</div>
+				<div class="rightinner">
+					<p>Paragraphs are medium-sized units of writing, longer than sentences, but shorter than sections, chapters, or entire works. Because they connect the “small” ideas of individual sentences to a “bigger” idea, paragraph structure is essential to any writing for organization, flow, and comprehension. </p>
+					<p>.......................................................</p>
+					<h1>Types of paragraphs</h1>
+					<p>Paragraphs are medium-sized units of writing, longer than sentences, but shorter than sections, chapters, or entire works. Because they connect the “small” ideas of individual sentences to a “bigger” idea, paragraph structure is essential to any writing for organization, flow, and comprehension. </p>
+					<h1>Types of paragraphs</h1>
+					<p>Paragraphs are medium-sized units of writing, longer than sentences, but shorter than sections, chapters, or entire works. Because they connect the “small” ideas of individual sentences to a “bigger” idea, paragraph structure is essential to any writing for organization, flow, and comprehension. </p>
+					<h1>Types of paragraphs</h1>
+					<p>Paragraphs are medium-sized units of writing, longer than sentences, but shorter than sections, chapters, or entire works. Because they connect the “small” ideas of individual sentences to a “bigger” idea, paragraph structure is essential to any writing for organization, flow, and comprehension. </p>
+					<h1>Types of paragraphs</h1>
+					<p>Paragraphs are medium-sized units of writing, longer than sentences, but shorter than sections, chapters, or entire works. Because they connect the “small” ideas of individual sentences to a “bigger” idea, paragraph structure is essential to any writing for organization, flow, and comprehension. </p>
+					<h1>Types of paragraphs</h1>
+					<p>Paragraphs are medium-sized units of writing, longer than sentences, but shorter than sections, chapters, or entire works. Because they connect the “small” ideas of individual sentences to a “bigger” idea, paragraph structure is essential to any writing for organization, flow, and comprehension. </p>
+					<h1>Types of paragraphs</h1>
+					<p>Paragraphs are medium-sized units of writing, longer than sentences, but shorter than sections, chapters, or entire works. Because they connect the “small” ideas of individual sentences to a “bigger” idea, paragraph structure is essential to any writing for organization, flow, and comprehension. </p>
+					<h1>Types of paragraphs</h1>
+					<p>Paragraphs are medium-sized units of writing, longer than sentences, but shorter than sections, chapters, or entire works. Because they connect the “small” ideas of individual sentences to a “bigger” idea, paragraph structure is essential to any writing for organization, flow, and comprehension. </p>
+				</div>
+				<div class="inner1">
+					<button id="1" class="ABOUT US">ABOUT US</button>
+					<button id="2" class="PARTNERS">PARTNERS</button>
+					<button id="3" class="DIFFERENTIATORS">DIFFERENTIATORS</button>
+					<button id="4" class="SERVICES">SERVICES</button>
+				</div>
+				<div class="innerright">
+					<h2>Internal Audit</h2>
+					<img src="image/img2.jpg">
+					<button>RESOURCES</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	</html>
